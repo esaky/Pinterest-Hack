@@ -1,0 +1,24 @@
+Now readers can pick which pinterest vote type they want to implement in their blog
+Default Types:
+One Image - Any Image - Hover Image
+
+Note: For Google Analytics or Adsense using Async is good, so we are going to use Async Javascript for Pinterest Code.
+
+Add this code to your Header.php file:
+<center><script type=”text/javascript”>// < ![CDATA[<br />
+(function(d){<br />
+  var f = d.getElementsByTagName(‘SCRIPT’)[0], p = d.createElement(‘SCRIPT’);<br />
+  p.type = ‘text/javascript';<br />
+  p.setAttribute(‘data-pin-hover’, true);
+  p.async = true;<br />
+  p.src = ‘//assets.pinterest.com/js/pinit.js';<br />
+  f.parentNode.insertBefore(p, f);<br />
+}(document));<br />
+// ]]></script></center>
+
+Add these Pinterest code in your WordPress Theme – Single.php
+
+<a href=”//www.pinterest.com/pin/create/button/” class=”pin-it-button” count-layout=”vertical” >Pin It</a>
+
+Here we have added class="pin-it-button" count-layout="vertical" -> which means you can add a "pin-it" button and Pinterest style button like horizontal or vertical. So when you add the 
+ p.setAttribute(‘data-pin-hover’, true); -> this will enable pinterest hover button.
